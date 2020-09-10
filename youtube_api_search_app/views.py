@@ -6,7 +6,7 @@ def index(request):
 
 # Create your views here.
 def search(request):
-    return render(request, "youtube_api_search_app/search.html")
+    return render(request, "search.html")
 
 # Create your views here.
 def search_result(request):
