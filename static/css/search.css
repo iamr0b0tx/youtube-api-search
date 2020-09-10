@@ -1,6 +1,8 @@
+/* the commented out background colors used to see the wire frame */
+
 .container{
     height: 100vh;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .logo-image{
@@ -8,13 +10,13 @@
     height: 12%;
     position: relative;
     top: 10%;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .logo-image > img{
     max-width: 100%;
     max-height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .search-form{
