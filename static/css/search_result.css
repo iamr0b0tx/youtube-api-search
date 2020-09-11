@@ -1,0 +1,44 @@
+/* the commented out background colors used to see the wire frame */
+
+.container{
+    height: 100vh;
+    background-color: yellow;
+}
+
+.top-bar{
+    background-color:cyan;
+    width: 100%;
+    height: 15%;
+    padding: 5% 0%;
+}
+
+.top-bar p{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(198, 198, 209);
+}
+
+.search-result{
+    height: 85%;
+    width: 100%;
+    background-color: green;
+}
+
+.search-result .row {
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    background-color: grey;
+}
+
+.search-result > .row > .thumbnail-div {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    background-color: red;
+}
+
+.search-result > .row > div > img {
+    max-width: 100%;
+    background-color: blue;
+}

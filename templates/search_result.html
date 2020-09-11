@@ -14,12 +14,40 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <!-- custom style -->
+    <link rel="stylesheet" href="{% static 'css/search_result.css' %}">
 </head>
 
 <body>
     <div class="container">
-        <div>
-            <h1>Search Result</h1>
+        <div class="top-bar">
+            <p>
+                <small>results for "{{ search_query }}"</small>
+            </p>
+        </div>
+
+        <div class="search-result">
+            {% for item in result %}
+                <div class="row">
+                    <div class="col-md-4 thumbnail-div">
+                        <img src="{% static 'images/makrwatch-logo.png' %}" alt="{{ item.title }}">
+                    </div>
+
+                    <div class="col-md-8">
+                        <h5>{{ item.title }}</h5>
+
+                        <div>
+                            <span>{{ item.num_of_views|number }}</span>
+                            <span>Views</span>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
         </div>
 
     </div>
