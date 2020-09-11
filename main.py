@@ -19,7 +19,7 @@ def main():
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "client_secret.json"
+    client_secrets_file = "client_secret_886166412429-7i12bii7g8198ef8sk0a19gj7chgpucl.apps.googleusercontent.com.json"
 
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
@@ -28,8 +28,10 @@ def main():
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, credentials=credentials)
 
+    flow.redirect_uri = 'https://127.0.0.1:8000'
+
     request = youtube.search().list(
-        part="snippet,statistics",
+        part="snippet",
         maxResults=50,
         order="date",
         q="surfing",
