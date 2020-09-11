@@ -29,8 +29,15 @@
         <div class="search-form">
             <form action="{% url 'search_result' %}" method="GET">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search topics on the videos you want to find" aria-label="Recipient's username"
-                        aria-describedby="button-addon2">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="search_query" 
+                        placeholder="Search topics on the videos you want to find" 
+                        aria-label="Recipient's username"
+                        aria-describedby="button-addon2"
+                        value="snippet"
+                    />
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
                             <span class="fas fa-search"></span>

@@ -8,6 +8,31 @@ For this repository code to work you will need the following tools/softwares ins
 - Git (Download [here]())
 - virtualenv (Set up instructions [here]())
 
+### Prerequisites
+You can check [here](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps) for more info on this section
+
+#### Enable APIs for your project
+Any application that calls Google APIs needs to enable those APIs in the API Console.
+
+To enable an API for your project:
+
+1. Open the API Library in the Google API Console.
+2. If prompted, select a project, or create a new one.
+3. Use the Library page to find and enable the YouTube Data API. Find any other APIs that your application will use and enable those, too.
+
+#### Create authorization credentials
+Any application that uses OAuth 2.0 to access Google APIs must have authorization credentials that identify the application to Google's OAuth 2.0 server. The following steps explain how to create credentials for your project. Your applications can then use the credentials to access APIs that you have enabled for that project.
+
+1. Go to the Credentials page.
+2. Click Create credentials > OAuth client ID.
+3. Select the Web application application type.
+4. Fill in the form and click Create. Applications that use languages and frameworks like PHP, Java, Python, Ruby, and .NET must specify authorized redirect URIs. The redirect URIs are the endpoints to which the OAuth 2.0 server can send responses.
+For testing, you can specify URIs that refer to the local machine, such as http://localhost:8080. With that in mind, please note that all of the examples in this document use http://localhost:8080 as the redirect URI.
+
+We recommend that you design your app's auth endpoints so that your application does not expose authorization codes to other resources on the page.
+
+After creating your credentials, download the client_secret.json file from the API Console. Securely store the file in a location that only your application can access.
+
 ### Set up steps
 1. Open your CLI (Terminal for linux users and Command prompt for windows users)
 2. Navigate to your home/Desktop directory for linux/windows users
@@ -63,3 +88,7 @@ python manage.py runserver
 ```
 it will output a url looking like this ```http://127.0.0.1:8000```, visit the url to interact with the application
 
+
+## References
+1. [Using OAuth 2.0 for Web Server Applications](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps)
+2. 

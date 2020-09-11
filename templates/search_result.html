@@ -35,7 +35,7 @@
             {% for item in result %}
                 <div class="row">
                     <div class="col-md-3 thumbnail-div">
-                        <img src="{% static 'images/makrwatch-logo.png' %}" alt="{{ item.title }}">
+                        <img src="{{ item.thumbnail_url }}" alt="{{ item.title }}">
                     </div>
 
                     <div class="video-info col-md-8">
@@ -44,7 +44,7 @@
                         <p class="channel-name">{{ item.channel_name }}</p>
 
                         <div class="views-div">
-                            <span class="number-of-views">{{ item.num_of_views|intcomma }}</span>
+                            <span class="number-of-views">{{ item.number_of_views|intcomma }}</span>
                             <span>Views</span>
                         </div>
 
