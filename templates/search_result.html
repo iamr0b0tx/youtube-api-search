@@ -34,25 +34,27 @@
         <div class="search-result">
             {% if result %}
                 {% for item in result %}
-                    <div class="row">
-                        <div class="col-md-3 thumbnail-div">
-                            <img src="{{ item.thumbnail_url }}" alt="{{ item.title }}">
-                        </div>
-
-                        <div class="video-info col-md-8">
-                            <h5>{{ item.title }}</h5>
-                            <!-- <br> -->
-                            <p class="channel-name">{{ item.channel_name }}</p>
-
-                            <div class="views-div">
-                                <span class="number-of-views">{{ item.number_of_views|intcomma }}</span>
-                                <span>Views</span>
+                    <a href="https://www.youtube.com/watch?v={{ item.video_id }}">
+                        <div class="row">
+                            <div class="col-md-3 thumbnail-div">
+                                <img src="{{ item.thumbnail_url }}" alt="{{ item.title }}">
                             </div>
 
-                            <p class="description">{{ item.description|truncatechars:128 }}</p>
-                            <p class="upload-date">{{ item.upload_date|timesince }} ago</p>
+                            <div class="video-info col-md-8">
+                                <h5>{{ item.title }}</h5>
+                                <!-- <br> -->
+                                <p class="channel-name">{{ item.channel_name }}</p>
+
+                                <div class="views-div">
+                                    <span class="number-of-views">{{ item.number_of_views|intcomma }}</span>
+                                    <span>Views</span>
+                                </div>
+
+                                <p class="description">{{ item.description|truncatechars:128 }}</p>
+                                <p class="upload-date">{{ item.upload_date|timesince }} ago</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>                
                     <br>
                     <hr>
                 {% endfor %}
