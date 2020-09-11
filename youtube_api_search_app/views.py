@@ -190,20 +190,26 @@ def search_result(request):
         # update the search query value
         context["search_query"] = search_query = request.GET.get("search_query", "")
 
-        # call the api
-        result = search_youtube_api(search_query)
+        try:
+            # call the api
+            result = search_youtube_api(search_query)
 
-        context["result"] = [
-            {
-                "title": item["snippet"]["title"],
-                "channel_name": item["snippet"]["channelTitle"],
-                "number_of_views": item["statistics"]["viewCount"],
-                "description": item["snippet"]["description"],
-                "upload_date": dateparse.parse_datetime(item["snippet"]["publishedAt"]),
-                "thumbnail_url": item["snippet"]["thumbnails"]["high"]["url"]
+            context["result"] = [
+                {
+                    "title": item["snippet"]["title"],
+                    "channel_name": item["snippet"]["channelTitle"],
+                    "number_of_views": item["statistics"]["viewCount"],
+                    "description": item["snippet"]["description"],
+                    "upload_date": dateparse.parse_datetime(item["snippet"]["publishedAt"]),
+                    "video_id": item["id"],
+                    "thumbnail_url": item["snippet"]["thumbnails"]["high"]["url"]
 
-            } for item in result['items']
-        ]
+                } for item in result['items']
+            ]
 
-        print(len(context['result']))
+            print(len(context['result']), "results found")
+
+        except Exception as e:
+            print(e)
+            
     return render(request, "search_result.html", context)

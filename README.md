@@ -95,4 +95,4 @@ it will output a url looking like this ```http://127.0.0.1:8000```, visit the ur
 1. [Using OAuth 2.0 for Web Server Applications](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps)
 2. [Python 3 Installation & Setup Guide](https://realpython.com/installing-python/)
 3. [How to Install PIP on Windows](https://www.liquidweb.com/kb/install-pip-windows/)
-4. [Installing Packages (in python)](https://packaging.python.org/tutorials/installing-packages/))
+4. [Installing Packages (in python)](https://packaging.python.org/tutorials/installing-packages/)
