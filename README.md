@@ -52,18 +52,18 @@ git clone https://github.com/iamr0b0tx/youtube-api-search
 cd youtube-api-search
 ```
 
-For those that don't have git pre-installed simply click the code button above and click __Download ZIP__. Once the Zip file download is complete, extarct the contents to the home directory (for linux users) or Desktop (for windows users). You should have a directory/folder namesd youtube-api-search-master which you should rename to youtube-api-search.
+For those that don't have git pre-installed simply click the code button above and click __Download ZIP__. Once the Zip file download is complete, extract the contents to the home directory (for linux users) or Desktop (for windows users). You should have a directory/folder namesd youtube-api-search-master which you should rename to youtube-api-search.
 
 4. Make sure to transfer your client_secret.json file to your youtube-api-search folder. Also amke sure the client_secret.json file has that exact name, client_secret.json.
 
-5. This step is optional but advisable. Set up your virtualenv and activate it by running the following commands
-    - #### Linux Users
+5. This step is optional but advised. Set up your virtualenv and activate it by running the following commands
+    - #### Windiws Users
     ```
     virtualenv venv
     venv\Scripts\activate
     ```
 
-    - #### Windows Users
+    - #### Linux Users
     ```
     virtualenv venv
     source venv/bin/activate
